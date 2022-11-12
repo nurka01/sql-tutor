@@ -35,7 +35,7 @@ INSERT INTO patient (first_name, last_name, middle_name, iin, date_of_birth, sex
     VALUES ('Maria', 'Olegovna', null, '990909658712', '09-09-1999', 'female', 'mathematician', 'maria_math@gmail.com', 'Ablay khan 32, dom 23');
 
 INSERT INTO doctor_patient (doctor_id, patient_id, status, from_time, to_time) 
-    VALUES (1, 1, 'broken leg', '2022-11-10 10:10:00', '2022-11-10 11:30:00');
+    VALUES (1, 1, 'broken leg', '2022-11-10 10:10:00','2022-11-10 11:30:00');
 INSERT INTO doctor_patient (doctor_id, patient_id, status, from_time, to_time) 
     VALUES (1, 2, 'dislocation of the leg', '2022-11-11 12:30:00', '2022-11-11 13:00:00');
 INSERT INTO doctor_patient (doctor_id, patient_id, status, from_time, to_time)
