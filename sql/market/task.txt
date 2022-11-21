@@ -1,0 +1,11 @@
+1. get a list of all products whose prices are more than 100,000 tenge.
+
+2. Group all products by category
+
+3. Get all cars
+
+4. Get all products whose country is the United States
+
+5. Sum of products by company
+
+6. top countries with the most products
