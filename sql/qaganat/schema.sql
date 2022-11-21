@@ -1,5 +1,5 @@
 
-DROP TABLE IF EXISTS sold_menu;
+DROP TABLE IF EXISTS sale_menu;
 DROP TABLE IF EXISTS sale;
 DROP TABLE IF EXISTS menu;
 DROP TABLE IF EXISTS employee;
@@ -13,9 +13,9 @@ CREATE TABLE employee (
     date_of_birth           DATE,
     sex                     VARCHAR(10),
     speciality              VARCHAR(50),
-    salary_month            VARCHAR(30),
+    salary_month            INT,
     card_number             VARCHAR(16) UNIQUE NOT NULL,
-    work_experience         VARCHAR(50)
+    experience_year         INT
 );
 
 CREATE TABLE menu (
@@ -27,7 +27,8 @@ CREATE TABLE menu (
 CREATE TABLE sale (
     id                      SERIAL PRIMARY KEY,
     card_number             VARCHAR(16),
-    time_sold               TIMESTAMP
+    time_sold               TIMESTAMP,
+    cashier                 INT
 );
 
 CREATE TABLE sale_menu (

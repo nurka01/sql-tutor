@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS ticket;
 DROP TABLE IF EXISTS airplane;
 DROP TABLE IF EXISTS passenger;
-DROP TABLE IF EXISTS IATA_code;
 DROP TABLE IF EXISTS flight;
+DROP TABLE IF EXISTS IATA_code;
 
 CREATE TABLE IATA_code (
     code            VARCHAR(3) NOT NULL UNIQUE PRIMARY KEY,
@@ -31,12 +31,17 @@ CREATE TABLE passenger (
     id              INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     first_name      VARCHAR(255),
     last_name       VARCHAR(255),
-    country         VARCHAR(255)
+    middle_name     VARCHAR(255),
+    date_of_birth   DATE,
+    gender          VARCHAR(10),
+    country         VARCHAR(255),
+    passport_no     VARCHAR(20)
 );
 
 CREATE TABLE ticket (
     id              INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     passenger_id    INT NOT NULL,
     flight_id       INT NOT NULL,
-    price           INT
+    price           INT,
+    seat            VARCHAR(4)
 );
