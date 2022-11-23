@@ -15,7 +15,7 @@ CREATE TABLE flight (
     id              INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     departure       VARCHAR(3) NOT NULL REFERENCES IATA_code(code),
     arrival         VARCHAR(3) NOT NULL REFERENCES IATA_code(code),
-    airplane_id     INT NOT NULL,
+    airplane_id     INT NOT NULL REFERENCES airplane(id),
     departure_time  TIMESTAMP NOT NULL,
     arrival_time    TIMESTAMP NOT NULL
 );
